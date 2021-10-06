@@ -1,0 +1,19 @@
+# our base image
+FROM mysql:5.7.28
+
+# specify the port number the container should expose
+EXPOSE 3306
+
+USER root
+
+WORKDIR /root
+
+# COPY .my.cnf /root
+COPY . .
+ADD schema.sql /docker-entrypoint-initdb.d
+
+RUN apt-get update -y
+RUN apt-get install -y apt-utils
+RUN apt-get install -y vim
+
+#CMD mysql -u root < batch.sql

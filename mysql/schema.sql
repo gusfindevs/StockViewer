@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS stocks;
+
+USE stocks;
+
+CREATE TABLE ohlcv_noad (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ticker CHAR(4) NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    open DECIMAL(10, 4) NOT NULL,
+    high DECIMAL(10, 4) NOT NULL,
+    low DECIMAL(10, 4) NOT NULL,
+    close DECIMAL(10, 4) NOT NULL,
+    volume BIGINT NOT NULL
+);
