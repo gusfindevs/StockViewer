@@ -1,14 +1,17 @@
+import os
+
 import fastapi
 import uvicorn
 
 import mysql.connector
 
+
 mydb = mysql.connector.connect(
-  host="localhost",
-  port=3306,
-  user="root",
-  password="root",
-  database="stocks"
+  host=os.environ.get('MYSQL_HOST'),
+  port=os.environ.get('MYSQL_PORT'),
+  user=os.environ.get('MYSQL_USER'),
+  password=os.environ.get('MYSQL_PASSWORD'),
+  database=os.environ.get('MYSQL_DATABASE')
 )
 
 app = fastapi.FastAPI()
