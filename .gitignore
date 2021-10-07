@@ -4,5 +4,6 @@ api/APIStockViewer.pem
 api/APIStockViewer.ppk
 
 api/Dockerfile.dev
+api/etc.environment
 
 mysql/.my.cnf

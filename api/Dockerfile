@@ -8,8 +8,9 @@ RUN pip install --no-cache-dir --upgrade -r /api/requirements.txt
 
 COPY . /api
 
-ENV MYSQL_HOST=? MYSQL_PORT=3306 \ 
-    MYSQL_USER=? MYSQL_PASSWORD=? MYSQL_DATABASE=?
+ENV MYSQL_HOST=${MYSQL_HOST} MYSQL_PORT=${MYSQL_PORT} \ 
+    MYSQL_USER=${MYSQL_USER} MYSQL_PASSWORD=${MYSQL_PASSWORD} \
+    MYSQL_DATABASE=${MYSQL_DATABASE}
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
