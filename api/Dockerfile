@@ -1,5 +1,7 @@
 FROM python:3.9
 
+EXPOSE 8000
+
 WORKDIR /api
 
 COPY ./requirements.txt /api/requirements.txt
