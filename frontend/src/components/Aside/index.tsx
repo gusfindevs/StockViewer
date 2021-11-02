@@ -1,11 +1,27 @@
 import React from 'react';
 
-import { Container } from './styles';
+import {
+  Container,
+  Header,
+  MenuContainer,
+  MenuItemLink,
+  Title,
+} from './styles';
 
 const Aside: React.FC = () => {
   return (
     <Container>
-      <h1>Aside</h1>
+      <Header>
+        <Title>StockViewer</Title>
+      </Header>
+
+      <MenuContainer>
+        <MenuItemLink href="#">Stocks Dashboard</MenuItemLink>
+
+        <MenuItemLink href="#">Screener Dashboard</MenuItemLink>
+
+        <MenuItemLink href="#">Exit</MenuItemLink>
+      </MenuContainer>
     </Container>
   );
 };
