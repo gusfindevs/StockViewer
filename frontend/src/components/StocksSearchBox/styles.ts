@@ -17,6 +17,8 @@ export const CardHeader = styled.div`
 `;
 
 export const CardBody = styled.div`
+  display: flex;
+
   padding: 1rem 1rem;
   background-color: white;
 `;

@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, CardHeader, CardBody } from './styles';
 
 import Search from '../Search';
+import DateSelector from '../DateSelector';
 
 const StocksSearchBox: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const StocksSearchBox: React.FC = () => {
       </CardHeader>
       <CardBody>
         <Search />
+        <DateSelector />
       </CardBody>
     </Container>
   );
