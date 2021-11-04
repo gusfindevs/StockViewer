@@ -1,15 +1,16 @@
 import React from 'react';
 
+import { Container } from './styles';
+
 import StocksSearchBox from '../../components/StocksSearchBox';
 
 const Dashboard: React.FC = () => {
   return (
-    <>
-      <h1>Dashboard</h1>
+    <Container>
       <StocksSearchBox />
       <StocksSearchBox />
       <StocksSearchBox />
-    </>
+    </Container>
   );
 };
 

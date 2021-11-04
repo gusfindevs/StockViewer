@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Container, CardHeader, CardBody } from './styles';
 
+import Search from '../Search';
+
 const StocksSearchBox: React.FC = () => {
   return (
     <Container>
@@ -9,7 +11,7 @@ const StocksSearchBox: React.FC = () => {
         <h2>Stock Search Header</h2>
       </CardHeader>
       <CardBody>
-        <h3>Stock Search Body</h3>
+        <Search />
       </CardBody>
     </Container>
   );

@@ -5,16 +5,18 @@ export const Container = styled.div`
   margin-bottom: 10px;
   border-radius: 10px;
 
+  width: 100%;
+
   overflow: hidden;
 `;
 
 export const CardHeader = styled.div`
   background-color: #f2f3f3;
-  padding: 5px;
+  padding: 0.4rem 1rem;
   border-bottom: 1px solid #ccc;
 `;
 
 export const CardBody = styled.div`
-  padding: 5px;
+  padding: 1rem 1rem;
   background-color: white;
 `;
