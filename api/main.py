@@ -30,14 +30,23 @@ def marketdata(ticker: str, date: str):
 
     return result
 
-@app.get('/tickerlist/')
+@app.get('/marketdata/tickerlist/')
 def tickerlist():
     cursor = mydb.cursor()
     cursor.execute(f"SELECT DISTINCT(ticker) FROM ohlcv_noad;")
     result = cursor.fetchall()
+    result = [item[0] for item in result]
 
     return result
 
+@app.get('/marketdata/dateslist/')
+def dateslist(ticker: str):
+    cursor = mydb.cursor()
+    cursor.execute(f"SELECT DISTINCT(date) FROM ohlcv_noad WHERE ticker='{ticker}';")
+    result = cursor.fetchall()
+    result = [item[0] for item in result]
+
+    return result
 
 if __name__ == '__main__':
     uvicorn.run(app)
