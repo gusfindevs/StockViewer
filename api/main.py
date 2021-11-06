@@ -30,5 +30,14 @@ def marketdata(ticker: str, date: str):
 
     return result
 
+@app.get('/tickerlist/')
+def tickerlist():
+    cursor = mydb.cursor()
+    cursor.execute(f"SELECT DISTINCT(ticker) FROM ohlcv_noad;")
+    result = cursor.fetchall()
+
+    return result
+
+
 if __name__ == '__main__':
     uvicorn.run(app)
