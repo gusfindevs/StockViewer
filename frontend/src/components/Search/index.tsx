@@ -12,7 +12,6 @@ const Search = () => {
           type="text"
           name="text"
           placeholder="Search stock ticker... eg: ABAE"
-          value=""
         />
       </form>
     </Container>
